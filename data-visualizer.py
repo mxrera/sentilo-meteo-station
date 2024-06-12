@@ -94,14 +94,14 @@ def plot_sensor_data(temperature, humidity, temperature_metrics, humidity_metric
     point_scatter(axes, 0, 0,temperature_metrics['max'], color='navy', label='Max')
     median_and_deviation(axes, 0, 0,temperature, temperature_metrics, 'salmon')
     hist(axes, 0, 1, temperature, 'Temperature Histogram', 'Frequency', 'Celsius[°C]', 'darkorange')
-    boxplot(axes, 0, 2, temperature, 'Temperature Violinplot', 'Celsius[°C]', f'Time[{time_unit}]', 'sandybrown', scale=2)
+    boxplot(axes, 0, 2, temperature, 'Temperature Boxplot', 'Celsius[°C]', f'Time[{time_unit}]', 'sandybrown', scale=2)
     
     subplot(axes, 1, 0, humidity, 'Humidity', 'Percentage[%]', f'Time [{time_unit}]', 'deepskyblue')
     point_scatter(axes, 1, 0, humidity_metrics['min'], color='salmon', label='Min')
     point_scatter(axes, 1, 0, humidity_metrics['max'], color='salmon', label='Max')
     median_and_deviation(axes, 1, 0, humidity, humidity_metrics, 'skyblue')
     hist(axes, 1, 1, humidity, 'Humidity Histogram', 'Frequency', 'Percentage[%]', 'deepskyblue')
-    boxplot(axes, 1, 2, humidity, 'Humidity Violinplot', 'Percentage[%]', f'Time[{time_unit}]', 'skyblue', scale=2)
+    boxplot(axes, 1, 2, humidity, 'Humidity Boxplot', 'Percentage[%]', f'Time[{time_unit}]', 'skyblue', scale=2)
     
     fig.subplots_adjust(hspace=0.35, wspace=0.25)
     plt.show()
