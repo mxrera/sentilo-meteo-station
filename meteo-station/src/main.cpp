@@ -35,8 +35,8 @@ void setup()
 
 void loop()
 {
-  float humidity = 10;
-  float temperature = 20;
+  float humidity = getHumidity();
+  float temperature = getTemperature();
   sendPostRequest(HUMIDITY_SENSOR, humidity);
   sendPostRequest(TEMPERATURE_SENSOR, temperature);
   delay(20000);
